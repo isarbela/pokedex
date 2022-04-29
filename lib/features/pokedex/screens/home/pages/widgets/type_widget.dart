@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class TypeWidget extends StatelessWidget {
   const TypeWidget({
@@ -11,6 +12,7 @@ class TypeWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 5),
       child: Container(
+        margin: const EdgeInsets.only(left: 2.0, right: 2.0, top: 5.0),
         decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.2),
             borderRadius: BorderRadius.circular(16)),
@@ -19,7 +21,7 @@ class TypeWidget extends StatelessWidget {
           child: Text(
             name,
             style: const TextStyle(
-                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
+                color: Colors.white, fontWeight: FontWeight.bold, fontSize: 10),
           ),
         ),
       ),

@@ -17,7 +17,6 @@ class DetailsPage extends StatefulWidget {
   final VoidCallback onBack;
   final PageController controller;
   final ValueChanged<Pokemon> onChangePokemon;
-
   @override
   _DetailsPageState createState() => _DetailsPageState();
 }
@@ -71,11 +70,23 @@ class _DetailsPageState extends State<DetailsPage> {
                     ),
                     Container(
                       decoration: const BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(24),
-                            topRight: Radius.circular(24),
-                          )),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(24),
+                          topRight: Radius.circular(24),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          Text(
+                            "Altura" + widget.pokemon.height,
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
